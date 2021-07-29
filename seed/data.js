@@ -6,9 +6,9 @@ const insertData = async () => {
     // reset database
     await db.dropDatabase()
 
-        // create an array of 30 objects
+        // create an array of 100 objects
         // use faker package to generate fake data
-        const posts = [...Array(30)].map(item => {
+        const posts = [...Array(100)].map(item => {
             return {
                 title: faker.lorem.sentence(),
                 image_url: faker.internet.url(),

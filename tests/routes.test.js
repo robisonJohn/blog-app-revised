@@ -57,9 +57,7 @@ describe("Test the express routes for posts", () => {
       const res = await request(app).post(`/api/posts`).send({
         title: "Test Post",
         image_url: "http://www.testing.com",
-        description: "http://www.testing.com",
-        github_url: "http://www.testing.com",
-        deployed_url: "http://www.testing.com",
+        description: "http://www.testing.com"
       });
       // test that the POST request was successful
       expect(res.statusCode).toEqual(201);
@@ -70,9 +68,7 @@ describe("Test the express routes for posts", () => {
       const res = await request(app).put(`/api/posts/${postId}`).send({
         title: "Update Test Post",
         image_url: "http://www.testing.com",
-        description: "http://www.testing.com",
-        github_url: "http://www.testing.com",
-        deployed_url: "http://www.testing.com",
+        description: "http://www.testing.com"
       });
       expect(res.statusCode).toEqual(200);
       expect(res.body).toHaveProperty("_id");
